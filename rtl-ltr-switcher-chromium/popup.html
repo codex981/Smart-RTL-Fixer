@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --bg-color: #f9fafb;
+      --text-color: #111827;
+      --btn-bg: #ffffff;
+      --btn-text: #374151;
+      --btn-border: #e5e7eb;
+      --btn-hover-bg: #f3f4f6;
+      --btn-hover-border: #d1d5db;
+      --primary-bg: #2563eb;
+      --primary-text: #ffffff;
+      --primary-hover: #1d4ed8;
+      --input-bg: #ffffff;
+      --input-border: #d1d5db;
+      --icon-hover: #e5e7eb;
+    }
+
+    body.dark {
+      --bg-color: #1f2937;
+      --text-color: #f9fafb;
+      --btn-bg: #374151;
+      --btn-text: #f9fafb;
+      --btn-border: #4b5563;
+      --btn-hover-bg: #4b5563;
+      --btn-hover-border: #6b7280;
+      --primary-bg: #3b82f6;
+      --primary-text: #ffffff;
+      --primary-hover: #2563eb;
+      --input-bg: #374151;
+      --input-border: #4b5563;
+      --icon-hover: #374151;
+    }
+
+    body {
+      min-width: 240px;
+      max-width: 400px;
+      width: 100vw;
+      box-sizing: border-box;
+      padding: 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      text-align: center;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .view {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 4px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 6px;
+      border-radius: 6px;
+      transition: background 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-color);
+    }
+
+    .icon-btn:hover {
+      background-color: var(--icon-hover);
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      border: 1px solid var(--btn-border);
+      border-radius: 6px;
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      transition: all 0.2s;
+    }
+
+    button:hover {
+      background-color: var(--btn-hover-bg);
+      border-color: var(--btn-hover-border);
+    }
+
+    button.primary {
+      background-color: var(--primary-bg);
+      color: var(--primary-text);
+      border-color: var(--primary-bg);
+    }
+
+    button.primary:hover {
+      background-color: var(--primary-hover);
+      border-color: var(--primary-hover);
+    }
+
+    select {
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid var(--input-border);
+      width: 100%;
+      margin-bottom: 10px;
+      font-size: 14px;
+      background: var(--input-bg);
+      color: var(--text-color);
+    }
+
+    .save-site-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--btn-border);
+      font-size: 13px;
+      justify-content: center;
+    }
+
+    .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 36px;
+      height: 20px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--btn-border);
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 14px;
+      width: 14px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked+.slider {
+      background-color: var(--primary-bg);
+    }
+
+    input:checked+.slider:before {
+      transform: translateX(16px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Main View -->
+  <div id="main-view" class="view hidden">
+    <div class="header">
+      <h3 id="title-main">Direction Switcher</h3>
+      <div class="header-actions">
+        <button id="btn-theme" class="icon-btn" title="Toggle Theme">🌙</button>
+        <button id="btn-settings" class="icon-btn" title="Settings">⚙️</button>
+      </div>
+    </div>
+    <button id="btn-rtl" class="primary">RTL</button>
+    <button id="btn-ltr" class="primary">LTR</button>
+    <button id="btn-auto">Auto</button>
+    <button id="btn-smart" class="primary" style="background-color: var(--primary-hover); margin-top: 4px;">Smart
+      Fix</button>
+
+    <div class="save-site-container">
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggle-save-site">
+        <span class="slider"></span>
+      </label>
+      <span id="label-save-site">Save for this site</span>
+    </div>
+  </div>
+
+  <!-- Settings View -->
+  <div id="settings-view" class="view hidden">
+    <div class="header">
+      <h3 id="title-settings">Select Language</h3>
+    </div>
+    <select id="lang-select">
+      <option value="ar">Arabic (العربية)</option>
+      <option value="arc">Aramaic (ܐܪܡܝܐ)</option>
+      <option value="az">Azeri (Azərbaycan)</option>
+      <option value="dv">Dhivehi (ދިވެހި)</option>
+      <option value="he">Hebrew (עברית)</option>
+      <option value="ku">Kurdish Sorani (کوردی)</option>
+      <option value="fa">Persian/Farsi (فارسی)</option>
+      <option value="ur">Urdu (اردو)</option>
+      <option value="en">English</option>
+    </select>
+    <button id="btn-save-lang" class="primary">Save</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+
+</html>
