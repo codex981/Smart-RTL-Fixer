@@ -1,13 +1,13 @@
 const translations = {
-  en: { title: "Direction Switcher", rtl: "Switch to RTL", ltr: "Switch to LTR", auto: "Auto (Default)", smart: "Smart Fix", settings: "Settings", save: "Save", selectLang: "Select Language", saveSite: "Save for this site" },
-  ar: { title: "مُبدّل الاتجاه", rtl: "يمين لليسار (RTL)", ltr: "يسار لليمين (LTR)", auto: "تلقائي", smart: "إصلاح ذكي (Smart Fix)", settings: "الإعدادات", save: "حفظ", selectLang: "اختر اللغة", saveSite: "حفظ التغييرات لهذا الموقع" },
-  he: { title: "מחליף כיוון", rtl: "ימין לשמאל (RTL)", ltr: "שמאל לימין (LTR)", auto: "אוטומטי", smart: "תיקון חכם (Smart Fix)", settings: "הגדרות", save: "שמור", selectLang: "בחר שפה", saveSite: "שמור עבור אתר זה" },
-  fa: { title: "تغییر جهت", rtl: "راست به چپ (RTL)", ltr: "چپ به راست (LTR)", auto: "خودکار", smart: "اصلاح هوشمند (Smart Fix)", settings: "تنظیمات", save: "ذخیره", selectLang: "انتخاب زبان", saveSite: "ذخیره برای این سایت" },
-  ur: { title: "سمت تبدیل کریں", rtl: "دائیں سے بائیں (RTL)", ltr: "بائیں سے دائیں (LTR)", auto: "خودکار", smart: "اسمارٹ فکس", settings: "ترتیبات", save: "محفوظ کریں", selectLang: "زبان منتخب کریں", saveSite: "اس سائٹ کے لیے محفوظ کریں" },
-  ku: { title: "گۆڕینی ئاراستە", rtl: "ڕاست بۆ چەپ (RTL)", ltr: "چەپ بۆ ڕاست (LTR)", auto: "خۆکار", smart: "چاکسازی زیرەک", settings: "ڕێکخستنەکان", save: "پاشەکەوت", selectLang: "زمان هەڵبژێرە", saveSite: "پاشەکەوت بکە بۆ ئەم سایتە" },
-  az: { title: "İstiqamət Dəyişdirici", rtl: "Sağdan Sola (RTL)", ltr: "Soldan Sağa (LTR)", auto: "Avtomatik", smart: "Ağıllı Düzəliş (Smart Fix)", settings: "Parametrlər", save: "Yadda saxla", selectLang: "Dil seçin", saveSite: "Bu sayt üçün yadda saxla" },
-  dv: { title: "ޑިރެކްޝަން ބަދަލުކުރާ", rtl: "ކަނާތުން ވާތަށް (RTL)", ltr: "ވާތުން ކަނާތަށް (LTR)", auto: "އޮޓޯ", smart: "ސްމާޓް ފިކްސް", settings: "ސެޓިންގްސް", save: "ސޭވް", selectLang: "ބަސް ޚިޔާރުކުރައްވާ", saveSite: "މި ސައިޓަށް ސޭވްކުރޭ" },
-  arc: { title: "ܡܚܠܦܢܐ ܕܨܘܒܐ", rtl: "ܝܡܝܢܐ ܠܣܡܠܐ (RTL)", ltr: "ܣܡܠܐ ܠܝܡܝܢܐ (LTR)", auto: "ܐܘܛܘܡܛܝܩܝ", smart: "ܬܘܩܢܐ ܚܟܝܡܐ (Smart Fix)", settings: "ܛܘܝܒ̈ܐ", save: "ܚܡܝ", selectLang: "ܓܒܝ ܠܫܢܐ", saveSite: "ܚܡܝ ܠܗܢܐ ܫܘܦܐ" }
+  en: { title: "Direction Switcher", rtl: "Switch to RTL", ltr: "Switch to LTR", auto: "Auto (Default)", smart: "Smart Fix", deep: "⚡ Deep Fix", settings: "Settings", save: "Save", selectLang: "Select Language", saveSite: "Save for this site" },
+  ar: { title: "مُبدّل الاتجاه", rtl: "يمين لليسار (RTL)", ltr: "يسار لليمين (LTR)", auto: "تلقائي", smart: "إصلاح ذكي (Smart Fix)", deep: "⚡ إصلاح عميق (Deep Fix)", settings: "الإعدادات", save: "حفظ", selectLang: "اختر اللغة", saveSite: "حفظ التغييرات لهذا الموقع" },
+  he: { title: "מחליף כיוון", rtl: "ימין לשמאל (RTL)", ltr: "שמאל לימין (LTR)", auto: "אוטומטי", smart: "תיקון חכם (Smart Fix)", deep: "⚡ תיקון עמוק (Deep Fix)", settings: "הגדרות", save: "שמור", selectLang: "בחר שפה", saveSite: "שמור עבור אתר זה" },
+  fa: { title: "تغییر جهت", rtl: "راست به چپ (RTL)", ltr: "چپ به راست (LTR)", auto: "خودکار", smart: "اصلاح هوشمند (Smart Fix)", deep: "⚡ اصلاح عمیق (Deep Fix)", settings: "تنظیمات", save: "ذخیره", selectLang: "انتخاب زبان", saveSite: "ذخیره برای این سایت" },
+  ur: { title: "سمت تبدیل کریں", rtl: "دائیں سے بائیں (RTL)", ltr: "بائیں سے دائیں (LTR)", auto: "خودکار", smart: "اسمارٹ فکس", deep: "⚡ ڈیپ فکس", settings: "ترتیبات", save: "محفوظ کریں", selectLang: "زبان منتخب کریں", saveSite: "اس سائٹ کے لیے محفوظ کریں" },
+  ku: { title: "گۆڕینی ئاراستە", rtl: "ڕاست بۆ چەپ (RTL)", ltr: "چەپ بۆ ڕاست (LTR)", auto: "خۆکار", smart: "چاکسازی زیرەک", deep: "⚡ چاکسازی قووت", settings: "ڕێکخستنەکان", save: "پاشەکەوت", selectLang: "زمان هەڵبژێرە", saveSite: "پاشەکەوت بکە بۆ ئەم سایتە" },
+  az: { title: "İstiqamət Dəyişdirici", rtl: "Sağdan Sola (RTL)", ltr: "Soldan Sağa (LTR)", auto: "Avtomatik", smart: "Ağıllı Düzəliş (Smart Fix)", deep: "⚡ Dərin Düzəliş (Deep Fix)", settings: "Parametrlər", save: "Yadda saxla", selectLang: "Dil seçin", saveSite: "Bu sayt üçün yadda saxla" },
+  dv: { title: "ޑިރެކްޝަން ބަދަލުކުރާ", rtl: "ކަނާތުން ވާތަށް (RTL)", ltr: "ވާތުން ކަނާތަށް (LTR)", auto: "އޮޓޯ", smart: "ސްމާޓް ފިކްސް", deep: "⚡ ޑީޕް ފިކްސް", settings: "ސެޓިންގްސް", save: "ސޭވް", selectLang: "ބަސް ޚިޔާރުކުރައްވާ", saveSite: "މި ސައިޓަށް ސޭވްކުރޭ" },
+  arc: { title: "ܡܚܠܦܢܐ ܕܨܘܒܐ", rtl: "ܝܡܝܢܐ ܠܣܡܠܐ (RTL)", ltr: "ܣܡܠܐ ܠܝܡܝܢܐ (LTR)", auto: "ܐܘܛܘܡܛܝܩܝ", smart: "ܬܘܩܢܐ ܚܟܝܡܐ (Smart Fix)", deep: "⚡ ܬܘܩܢܐ ܥܡܝܩܐ (Deep Fix)", settings: "ܛܘܝܒ̈ܐ", save: "ܚܡܝ", selectLang: "ܓܒܝ ܠܫܢܐ", saveSite: "ܚܡܝ ܠܗܢܐ ܫܘܦܐ" }
 };
 
 const apiNamespace = chrome;
@@ -23,6 +23,7 @@ const elBtnRtl = document.getElementById('btn-rtl');
 const elBtnLtr = document.getElementById('btn-ltr');
 const elBtnAuto = document.getElementById('btn-auto');
 const elBtnSmart = document.getElementById('btn-smart');
+const elBtnDeep = document.getElementById('btn-deep');
 const elBtnSettings = document.getElementById('btn-settings');
 const elBtnSaveLang = document.getElementById('btn-save-lang');
 const elBtnTheme = document.getElementById('btn-theme');
@@ -92,7 +93,8 @@ function applyTranslations(lang) {
   elBtnRtl.textContent = t.rtl;
   elBtnLtr.textContent = t.ltr;
   elBtnAuto.textContent = t.auto;
-  if (elBtnSmart) elBtnSmart.textContent = t.smart || "Smart Fix";
+  if (elBtnSmart) elBtnSmart.textContent = t.smart || 'Smart Fix';
+  if (elBtnDeep) elBtnDeep.textContent = t.deep || '⚡ Deep Fix';
   elBtnSettings.title = t.settings;
   elBtnSaveLang.textContent = t.save;
   elLabelSaveSite.textContent = t.saveSite;
@@ -182,3 +184,4 @@ elBtnRtl.addEventListener('click', () => setDirection('rtl'));
 elBtnLtr.addEventListener('click', () => setDirection('ltr'));
 elBtnAuto.addEventListener('click', () => setDirection('auto'));
 elBtnSmart.addEventListener('click', () => setDirection('smart'));
+if (elBtnDeep) elBtnDeep.addEventListener('click', () => setDirection('deep'));
